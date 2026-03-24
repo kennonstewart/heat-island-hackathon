@@ -1,5 +1,7 @@
 # ThermalGen — Executive Summary
 
+> **Model type:** Conditional latent diffusion model (flow-matching) — specifically, an RGB-guided image-to-image translation model that synthesizes thermal infrared images from visible-light RGB inputs. It is a transformer-based diffusion model (SiT backbone) operating in the latent space of a KL-VAE, with class-conditional and classifier-free guidance support.
+
 ## What It Does
 
 ThermalGen translates ordinary **RGB (visible light) images into thermal infrared images**. Given a photo, it synthesizes a plausible corresponding thermal image as if captured by a thermal camera. This is the core capability: RGB → Thermal.
