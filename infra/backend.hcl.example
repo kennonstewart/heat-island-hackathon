@@ -1,0 +1,6 @@
+bucket         = "heat-island-hackathon-tf-state-033286551182"
+key            = "hackathon/terraform.tfstate"
+region         = "us-east-1"
+profile        = "default"
+dynamodb_table = "heat-island-hackathon-tf-locks"
+encrypt        = true

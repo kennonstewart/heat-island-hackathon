@@ -1,0 +1,25 @@
+aws_region      = "us-east-1"
+aws_profile     = "default"
+environment     = "hackathon"
+name_prefix     = "heat-island"
+
+# Leave unset/empty to use default VPC + default subnets.
+# vpc_id     = "vpc-xxxxxxxx"
+# subnet_ids = ["subnet-xxxx", "subnet-yyyy"]
+
+api_container_image = "public.ecr.aws/docker/library/nginx:stable"
+api_container_port  = 8080
+api_desired_count   = 1
+
+batch_container_image = "public.ecr.aws/docker/library/python:3.11-slim"
+batch_max_vcpus       = 32
+
+# Optional explicit bucket name. Leave null to auto-generate a unique name.
+# data_bucket_name = "my-unique-bucket"
+
+# Keep these key=value partition paths for easy Glue/Athena parsing.
+athena_results_prefix = "athena/results/"
+
+tags = {
+  owner = "group-1"
+}
